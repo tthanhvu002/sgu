@@ -1,0 +1,334 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+.sgu{
+    overflow: hidden;
+}
+.header{
+    background-color: #164380;
+    padding: 8px 30px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.nav{
+    display: flex;
+}
+.nav__item{
+    text-transform: uppercase;
+    color: white;
+    position: relative;
+}
+.nav__item:hover .sub-menu{
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+    z-index: 9;
+}
+.sub-menu{
+    
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+    background-color: aqua;
+    width: 850px;
+    top: 55px;
+    right: -470px;
+}
+.sub-menu::before{
+    position: absolute;
+    content: "";
+    width: 300px;
+    height: 90px;
+    top: -30px;
+    left: 30%;
+    z-index: -1;
+}
+.sub-menu:nth-child(1){
+    right: -350px;
+}
+.sub-menu:nth-child(){
+    left: 100px;
+}
+.sub-menu__item p{
+    color: black;
+    margin-left: 20px;
+}
+.sub-menu__item p:hover{
+    transition: 0.3s ease-in-out;
+    background-color:#164380;
+}
+.nav__item:not(:first-child){
+    margin-left: 20px;
+}
+
+.container-fluid{
+    width: 1100px;
+    margin-top: 40px;
+}
+
+
+
+.col-md-6:not(:last-child){
+    padding-right: 44px;
+}
+.title-wrap{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.title__heading{
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.line-wrap{
+    flex: 1;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.line-top, .line-bottom{
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: #3f42d6;
+}
+
+.line-bottom{
+    margin-top: 10px;
+}
+
+.col-md-6 img{
+    width: 100%;
+
+}
+
+.content-wrap{
+    border: 3px solid rgba(204, 204, 204, 0.438);
+    padding: 30px 25px 20px 25px;
+}
+
+.content__heading{
+    font-size: 14px;
+}
+.content__heading:hover{
+    transition: 0.3s ease-in-out;
+    color: #727765;
+}
+.content-wrap p {
+    font-size: 12px;
+}
+
+.post-item span{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.post-item span:hover{
+    transition: 0.3s ease-in-out;
+    color: #b7d45c;
+}
+.noti-list{
+    margin-bottom: 90px;
+}
+.noti-item:not(:last-child){
+    margin-bottom: 20px;
+}
+.noti-item:hover{
+    transition: 0.3s ease-in-out;
+    color: #b7d45c;
+}
+.next-page{
+    display: flex;
+    margin-left: auto;
+    margin-top: 20px;
+}
+.box{
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+    line-height: 15px;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 14px;
+}
+.box.selected{
+    background-color: #b7d45c;
+}
+
+.schedule{
+    margin-top: 20px;
+}
+.schedule__heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.schedule__heading h2{
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.db-line{
+    width: 150px;
+    height: 10px;
+    border-top:1px solid black ;
+    border-bottom: 1px solid black;
+    border-color: #164380;
+}
+.schedule p:hover{
+    color: #b7d45c;
+}
+.content-box{
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+.content-box h2{
+    font-size: 18px;
+}
+.content-box p{
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 90px;
+}
+.content-box button{
+    background-color: #b7d45c;
+    color: white;
+    border: none;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card{
+    padding: 0 4px;
+    margin-top: 40px;
+    height: 480px;
+}
+.card__heading{
+    padding: 0 4px;
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.card__list li{
+    margin-top: 20px;
+    font-size: 14px;
+}
+.card__list li:hover{
+    color: #b7d45c;
+    transition: 0.3s ease-in-out;
+}
+
+.flip-box__wrap{
+    background-image: url(https://sgu.edu.vn/wp-content/uploads/2016/10/wood_dark_bkgd_bw1-136x300.jpg);
+    width: 100%;
+}
+.flip-box{
+    max-width: 300px;
+    min-height: 200px;
+    margin-top: 70px;
+    perspective: 1500px;
+}
+.flip-box-inner{
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+} 
+.flip-box .front,
+.flip-box .back {
+    width: 300px;
+    min-height: 200px; 
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    padding: 20px 20px 20px;
+
+} 
+.flip-box .back {
+    transform: rotateY(180deg);
+  }
+.flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+    
+  }
+.flip-box__icon{
+    color: white;
+    border-radius: 50%;
+    background-color: #164380;
+    width: 50px;
+    height: 50px; 
+    line-height: 45px;
+    margin: 10px 0;
+    transform: translateX(110px);
+}
+.front{
+    text-align: center;
+    background-color: #fff;
+
+}
+.flip-box__text{
+    margin-top: 20px;
+}
+.back{
+    text-align: center;
+    background-color: #3f42d6;
+}
+.back ul li{
+    margin-top: 12px;
+}
+.back div{
+    text-align: center;
+    padding: 4px 0px;
+    background-color: #b7d45c;
+}
+
+.img-slider{
+    display: flex;
+    max-width: 1110px;
+    margin: 20px auto;
+    column-gap: 12px;
+}
+
+.img__slide{
+    flex: 0 0 calc(20% - 24px);
+}
+.img__slide img{
+    width: 100%;
+}
+
+.footer{
+    padding: 60px 0 40px;
+    background-color:#164380;
+    color: #fff;
+}
+.footer h3{
+    text-transform: uppercase;
+}
+.footer p{
+    margin-bottom: 8px;
+}
+
+.footer ul li{
+    margin-top: 25px;
+    color: #888;
+    border-bottom: 1px solid #888;
+}
+.footer ul li:hover{
+    color: #b7d45c;
+    transition: 0.3s ease-in-out;
+}
+.footer iframe{
+    width: 100%;
+    height: 300px;
+}
